@@ -1,0 +1,11 @@
+{
+  "name": "firebase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ducga1998/learn-firebase.git",
+  "author": "Ducnm <duc2820@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-tools": "^6.1.2"
+  }
+}
