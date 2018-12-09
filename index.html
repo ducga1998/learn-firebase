@@ -14,51 +14,10 @@
     <input id="idUser" type="text" placeholder="idUser" />
     <input id="email" type="text" placeholder="email" />
     <button onclick="writeData()">Add Data</button>
+    <div id="list"></div>
+
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    <script>
-        //  CRUD  
-        // CREATE
-        //DELETE
-        // update
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDeNPga2ZOnJ2c8_liEhOZ_oE0zu67xPqU",
-            authDomain: "aalo-alo-1543997548313.firebaseapp.com",
-            databaseURL: "https://aalo-alo-1543997548313.firebaseio.com",
-            projectId: "aalo-alo-1543997548313",
-            storageBucket: "aalo-alo-1543997548313.appspot.com",
-            messagingSenderId: "833384826684"
-        };
-        firebase.initializeApp(config);
-        const dataBase = firebase.database()
-
-        const storage = firebase.storage()
-        const storageRef = storage.ref()
-        const imageRef = storageRef.child('images')
-        const spaceRef = storageRef.child('images/space.jpg')
-        const data = dataBase.ref('users/ascasc')
-        data.emit('value', () => {
-
-        })
-        data.on('value', (data) => {
-            console.log('casncjasbc', data)
-            console.log('real time', data.val())
-        })
-        function writeData() {
-            const idUser = document.getElementById('idUser').value
-            const name = document.getElementById('name').value
-            const email = document.getElementById('email').value
-            dataBase.ref('users/' + idUser).set({
-                name,
-                idUser,
-                email
-            })
-
-        }
-
-            // writeData("cdcbsdhjbcsbdhbcjsbdjcbjsbdchjbsd", "cascas", "cascas")
-    </script>
-    </script>
+    <script src="./firebase.js"></script>
 </body>
 
 </html>
